@@ -6,7 +6,7 @@
 
 ### Team Members:
 
-    - Caroline Rink (Front-End Developer) :cat: 
+    - Caroline Rink (Front-End Developer) :sparkles: 
     - Dorian Crawford (Think-tanker)
     - Orit Freud (Content Hacker)
     - Rani Rab (Documentation Engineer)
