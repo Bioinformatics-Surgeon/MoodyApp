@@ -1,4 +1,4 @@
-#  Project-1-proposal
+# Project-1-proposal
 
 ## Project Description
 
@@ -6,51 +6,38 @@
 
 ### Team Members:
 
-    - Caroline Rink (Front-End Developer) :sparkles: 
-    - Dorian Crawford (Think-tanker)
-    - Orit Freud (Content Hacker)
-    - Rani Rab (Documentation Engineer)
-    - Cody Goss (Project Strategist)
+- Caroline Rink (Front-End Developer and Cat Interpreter)
+- Dorian Crawford (Think-tanker and Fitness Coach)
+- Orit Freud (Content Hacker and Astrology Expert)
+- Rani Rab (Documentation Engineer and Mother Bear)
+- Cody Goss (Project Strategist and Tea Dude)
 
 ### Project Description:
-+ Using the **FacePlusPlus** API we will construct an interface that chooses a playlist depending on (var **mood** = "mostly likley mood derived from photo") inserted into the **FacePlusPlus** API. Moody will then insert the most likely mood from **FacePlusPlus** API into the popular music API, **Spotify** and will spit out a playlist assciated with the mood inputed.
-    
-    
-    Face recognition to mood playlist application. When you either take a picture with you photo or you insert a picture from you local drive
++ Using the **Face++ API** we will construct an interface that chooses a playlist depending on (**mood** = "mostly likely mood derived from image"). Moody will then insert the **mood** from **Face++ API** analytics into the popular music API "Spotify" and will spit out a playlist associated with the mood.
 
+### Sketch of Final Product: (Being done in Wire Frame)
 
-App that allows users to search for an artist to see upcoming events/concerts.  Click on specific concert to access google maps.
+### APIs used :
+- Google Fonts API
+- Spotify API
+- Face++ API
 
-Sketch of Final Product - (Being done in Wire Frame)
+### **Rough** Breakdown of Tasks:
 
-APIs to be Used:
-Bands in Town,
-Google maps
+- Caroline Rink: Front-End Lead
+- Dorian Crawford: Face++ API Lead
+- Orit Freud: JS and jQuery Lead
+- Rani Rab: QA and R&D Lead
+- Cody Goss: Spotify Lead
 
-Rough Breakdown of Tasks:
+### Deadlines:
 
-Creat Github repository - Connor
+- Touch up wireframe, Pseudo Code, Read Documentation 3/29/2018
+- Implement HTML, Basic CSS, JS, jQuery, and other technologies ... 3/30/2018
+- Continue Composing App 3/31/2018
+- Enjoy Easter and Continue Composing App 4/1/2018
+- Deploy App: Monday 4/2/2018
+- Compose Presentation: Tuesday 4/3/2018
 
-Create Google drive project folder - Kristen
-
-Research API documentation for Google Maps for endpoints and begin pulling and testing what data object endpoints are available for pulling- Justin
-
-Research API documentation for bands in town for endpoints begin pulling and testing what data object endpoints are available for pulling - Connor
-
-Create basic html  for data output - Connor
-
-For now, static output for bands in town data object as  individual component  and google maps data object as other component - Team
-
-Wireframe final deployed app aspirations- Victor
-
-Research CSS options/themes for styling - Victor
-
-Research additional library to use to enhance final product - TBD
-
-Deadlines:
-
-Complete app - Monday 4/2
-
-Work on Presentation - Tuesday 4/3
 
 
