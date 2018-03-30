@@ -47,18 +47,6 @@ img {
     opacity: 0;
 }
 
-/* button {
-    font-family: 'Varela Round', sans-serif;
-    float: left;
-    border: 2px solid white;
-    padding: 30px;
-    border-radius: 50%;
-    color: white;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    cursor: pointer;
-} */
-
 body {
     background: url(../images/skin_side_up.png) no-repeat fixed;
     background-repeat: repeat;
