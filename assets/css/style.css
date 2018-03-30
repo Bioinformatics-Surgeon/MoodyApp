@@ -1,0 +1,62 @@
+#logo-container {
+    font-family: 'Pacifico', cursive;
+    margin-top: 12px;
+}
+
+#navBar {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+img {
+    margin-top: 75px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    float: left;
+    height: 70%;
+    width: 30%;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+    float: left;
+    margin-top: 375px;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+body {
+    background: url(../images/skin_side_up.png) no-repeat fixed;
+    background-repeat: repeat;
+}
+
+.moodContainer {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 35px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid grey;
+    margin-top: 75px;
+    float: right;
+    text-align: left;
+    width: 50%;
+}
+
+.playlistContainer {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 50px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid grey;
+    margin-top: 20px;
+    float: right;
+    text-align: center;
+    height: 300px;
+    width: 50%;
+}
