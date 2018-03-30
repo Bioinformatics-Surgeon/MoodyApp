@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moody</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="teal lighten-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Moody</a>
+            <ul class="right hide-on-med-and-down" id="navBar">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="col s6 photoContainer">
+            <img src="assets/images/placeholderportrait.jpeg">
+            <form id="file-upload">
+                <input type="file" accept="image/png,image/jpeg" class="upload" />
+                <input type="submit" id="submit">
+            </form>
+        </div>
+        <div class="moodContainer">
+            <div class="col s8 push-s4">
+                <h1>Caroline's Mood: </h1>
+            </div>
+        </div>
+        <div class="playlistContainer">
+            <div class="col s8 push-s4">
+                <h1>Playlist</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
