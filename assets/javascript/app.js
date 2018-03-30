@@ -1,5 +1,8 @@
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 
 // To grab the Bearer Token from the redirected URL after logining into Spotify 
 
@@ -12,6 +15,7 @@ var start = window.location.href.indexOf("=");
 var str = window.location.href;
 
 token = str.substr(start + 1,143);
+
 
 console.log ( token );
 
@@ -43,4 +47,7 @@ console.log ( token );
             console.log (keysSorted[6]);
         });
     });
+
+
+console.log ( token );
 
