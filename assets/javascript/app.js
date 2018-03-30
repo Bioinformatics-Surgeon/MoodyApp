@@ -66,7 +66,6 @@ window.onload = function () {
 
                 fileDisplayArea.appendChild(img);
 
-
             }
 
             reader.readAsDataURL(file);
