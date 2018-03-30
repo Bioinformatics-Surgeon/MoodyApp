@@ -48,17 +48,17 @@ body {
     width: 50%;
 }
 
-.playlistContainer {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 50px;
-    background-color: white;
-    padding: 20px;
-    border: 2px solid grey;
-    margin-top: 20px;
-    float: right;
-    text-align: center;
+iframe {
+    margin: 15px;
+    margin-left: 20px;
     height: 300px;
     width: 50%;
+}
+
+.spotifyButton {
+    font-family: 'Varela Round', sans-serif;
+    display: block;
+    text-align: center;
 }
 
 .otherAttributes {
@@ -67,7 +67,7 @@ body {
     background-color: white;
     padding: 20px;
     border: 2px solid grey;
-    margin-top: 500px;
+    margin-top: 50px;
     text-align: left;
     height: 100px;
     width: 100%;
