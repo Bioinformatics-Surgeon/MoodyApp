@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mood in Console</h1>
+
+        <!-- We'll be dumping our JSON contents in here -->
+        <div id="movie-view"></div>
+
+        <!-- This form will be where users input data about the movies -->
+        <form id="movie-form">
+            <label for="movie-input">Search for a movie</label>
+            <input type="text" id="movie-input">
+            <br>
+
+            <!-- This button will trigger our AJAX call -->
+            <input id="find-movie" type="submit" value="Click and Wait for request">
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // This .on("click") function will trigger the AJAX Call
+            $("#find-movie").on("click", function (event) {
+                event.preventDefault();
+
+                var settings = {
+                    "url": "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=http://entertainment.ie//images_content/rectangle/620x372/Shining201210161622705.jpg&return_attributes=emotion",
+                    "method": "POST",
+                }
+
+                $.ajax(settings).done(function (response) {
+
+                    var emotionArray = response.faces[0].attributes.emotion;
+                    console.log(emotionArray);
+
+            
+                    keysSorted = Object.keys(emotionArray).sort(function (a, b) {
+                        return emotionArray[a] - emotionArray[b]
+                    })
+                    console.log(keysSorted);
+
+                    var emotion = keysSorted[6];
+
+                    console.log (keysSorted[6]);
+                });
+            });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -2,39 +2,27 @@
 <html lang="en">
 
 <head>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Login | Moody</title>
+    <title>Home | Moody</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-        <nav class="teal lighten-4" role="navigation">
-                <div class="nav-wrapper container">
-                    <a id="logo-container" href="#" class="brand-logo">Moody</a>
-                    <ul class="right hide-on-med-and-down" id="navBar">
-                        <li>
-                    <a href="#">Home</a>
+    <nav class="teal lighten-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Moody</a>
+            <ul class="right hide-on-med-and-down" id="navBar">
+                <li>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">Moody</a>
-                </li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Moody</a>
+                    <a href="contact.html">Contact Us</a>
                 </li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger">
@@ -42,27 +30,32 @@
             </a>
         </div>
     </nav>
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <div class="section no-pad-bot" id="index-banner">
-                <div class="container">
-                    <br>
-                    <br>
-                    <img class="circle responsive-img" src="assets/images/moody.jpg">
 
-                    <br></br>
-                    <div class="row center">
-                        <a href="https://accounts.spotify.com/authorize?client_id=8efefb0e5a334976a79ed8242e4691ac&redirect_uri=https://bioinformatics-surgeon.github.io/MoodyApp/&response_type=token" id="spotify-connect" class="btn-large waves-effect waves-teal lighten-4">Connect to Spotify</a>
-                    </div>
-                    <br>
-                    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s5 photoContainer">
+                <img class="placeholder-image" src="assets/images/placeholder.png" />
+                <div class="upload-btn-wrapper">
+                    <button class="btn-large teal lighten-3">Upload a file</button>
+                    <input type="file" accept="image/png,image/jpeg" class="upload" />
                 </div>
             </div>
-            
-        <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript" src="app.js"></script>
-
-    
+            <div class="col s7">
+                <div class="moodContainer">
+                    <h1>Caroline's Mood: </h1>
+                </div>
+                <div class="playlistContainer">
+                    <iframe src="https://open.spotify.com/embed?uri=spotify%3Aalbum%3A2rp5riHULWgrXPsDtsp1ir&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+                </div>
+                <div class="center spotifyButton">
+                    <a href="https://accounts.spotify.com/authorize?client_id=8efefb0e5a334976a79ed8242e4691ac&redirect_uri=https://bioinformatics-surgeon.github.io/MoodyApp/&response_type=token" id="spotify-connect" class="btn-large waves-effect waves-teal lighten-4">Connect to Spotify</a>
+                </div>
+                <div class="otherAttributes">
+                    <h1>Other Attributes about you: </h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
