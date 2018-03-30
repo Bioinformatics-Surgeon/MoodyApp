@@ -12,16 +12,44 @@
 img {
     margin-top: 75px;
     border-radius: 50%;
-    border: 2px solid grey;
+    border: 2px solid black;
     float: left;
-    height: 70%;
-    width: 30%;
+    height: 40%;
+    width: 40%;
 }
 
-button {
+.upload-btn-wrapper {
+    margin-top: 370px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn {
+    font-family: 'Varela Round', sans-serif;
+    border: 2px solid white;
+    color: gray;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+/* button {
     font-family: 'Varela Round', sans-serif;
     float: left;
-    margin-top: 375px;
     border: 2px solid white;
     padding: 30px;
     border-radius: 50%;
@@ -29,7 +57,7 @@ button {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     cursor: pointer;
-}
+} */
 
 body {
     background: url(../images/skin_side_up.png) no-repeat fixed;
@@ -45,14 +73,14 @@ body {
     margin-top: 75px;
     float: right;
     text-align: left;
-    width: 50%;
+    width: 45%;
 }
 
 iframe {
     margin: 15px;
     margin-left: 20px;
     height: 300px;
-    width: 50%;
+    width: 45%;
 }
 
 .spotifyButton {
@@ -68,6 +96,7 @@ iframe {
     padding: 20px;
     border: 2px solid grey;
     margin-top: 50px;
+    margin-bottom: 50px;
     text-align: left;
     height: 100px;
     width: 100%;
