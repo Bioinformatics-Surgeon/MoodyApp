@@ -39,6 +39,7 @@ $(document).ready(function () {
                 } else{
                     emotionIdToFind = "6AtEuKdXIbx2w5Lhqf0GRP";
                 }
+                console.log(emotionIdToFind);
                 // emotion = emotionMappingObject.emotion;
                 //run the ajax call
                 $.ajax({
