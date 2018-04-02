@@ -7,6 +7,20 @@
     font-size: 40px;
 }
 
+.header {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    margin-top: 75px;
+}
+
+.form-input {
+    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border: 1px solid grey;
+    margin-bottom: 110px;
+}
+
 .photoContainer {
     position: relative;
 }
@@ -26,7 +40,9 @@
     left: 50%;
     margin-left: -84px;
     bottom: 40px;
-    /* border-radius: 8px; */
+    border-radius: 8px;
+    border: 2px solid grey;
+
 }
 
 .upload-btn-wrapper input[type=file] {
@@ -76,18 +92,17 @@ iframe {
     margin: 15px 0;
     height: 300px;
     width: 100%;
-    /* opacity: 0.85; */
+    opacity: 0.85;
 }
 
-.spotifyButton {
+#spotify-connect {
     font-family: 'Varela Round', sans-serif;
-    /* border-radius: 12px; */
-    display: block;
-    text-align: center;
+    border-radius: 8px;
+
 }
 
-/* .otherAttributes { */
-    /* font-family: 'Varela Round', sans-serif;
+.otherAttributes {
+    font-family: 'Varela Round', sans-serif;
     font-size: 25px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
@@ -103,4 +118,6 @@ iframe {
     background-color: #b2dfdb;
     padding-bottom: 15px;
     font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+
 }
