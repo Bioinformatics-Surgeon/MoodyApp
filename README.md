@@ -32,7 +32,7 @@
 
 ### Deadlines:
 
-- Touch up wireframe, Pseudo Code, Read Documentation 3/29/2018
+- Touch up wireframe, Pseudo Code, Read Documentation,  3/29/2018
 - Implement HTML, Basic CSS, JS, jQuery, and other technologies ... 3/30/2018
 - Continue Composing App 3/31/2018
 - Enjoy Easter and Continue Composing App 4/1/2018
