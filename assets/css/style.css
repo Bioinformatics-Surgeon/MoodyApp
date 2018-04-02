@@ -7,6 +7,20 @@
     font-size: 40px;
 }
 
+.header {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    margin-top: 75px;
+}
+
+.form-input {
+    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border: 1px solid grey;
+    margin-bottom: 110px;
+}
+
 .photoContainer {
     position: relative;
 }
@@ -27,6 +41,7 @@
     margin-left: -84px;
     bottom: 40px;
     border-radius: 8px;
+    border: 2px solid grey;
 }
 
 .upload-btn-wrapper input[type=file] {
@@ -71,9 +86,9 @@ iframe {
     opacity: 0.85;
 }
 
-.spotifyButton {
+#spotify-connect {
     font-family: 'Varela Round', sans-serif;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .otherAttributes {
@@ -86,4 +101,12 @@ iframe {
     text-align: left;
     height: 150px;
     width: 100%;
+}
+
+#footer {
+    text-align: center;
+    background-color: #b2dfdb;
+    padding-bottom: 15px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
 }
