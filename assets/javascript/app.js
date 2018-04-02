@@ -1,40 +1,39 @@
-$(document).ready(function() {
-  
-  var emotionMappingObject = {
-    sad: "0ejyqdntIi7ZukKgCABVFq",
-    angry: "1yrVnLy8kZYvp8r6XuLono",
-    happy: "6AtEuKdXIbx2w5Lhqf0GRP",
-    disgust: "7LzO31VmX8H8oHPCZk7AKw",
-    neutral: "4KjjGytXjIH2KZ41HKjz4R",
-    fear: "1Alb1XSrOASaO2Wdrr7lL8",
-    suprise: "3gbUs7iNyYP6E3cr9xQZsD"
-  };
+$(document).ready(function () {
+
+    var emotionMappingObject = {
+        sad: "0ejyqdntIi7ZukKgCABVFq",
+        angry: "1yrVnLy8kZYvp8r6XuLono",
+        happy: "6AtEuKdXIbx2w5Lhqf0GRP",
+        disgust: "7LzO31VmX8H8oHPCZk7AKw",
+        neutral: "4KjjGytXjIH2KZ41HKjz4R",
+        fear: "1Alb1XSrOASaO2Wdrr7lL8",
+        suprise: "3gbUs7iNyYP6E3cr9xQZsD"
+    };
 
     var start = window.location.href.indexOf("=");
     var end = window.location.href.indexOf("&");
     var str = window.location.href;
     var token = str.substring(start + 1, end);
     // var token = "BQBJqYhw1Zr8XV7x-_AHE_GWx0267QKZOxQQ7UnH1Y6bnLAI5I-z0YsxSxowIo2vGBzd4DXih2_ZwI1-UnalXTzKmwC_j9X9YNyRfLLL_SBw3ydXYUOdC6CEFyjP-koiUqc-qMa39pT1S1E-_w"
-    
+
     // console.log("token: ",token);
 
 
 
-  $.ajax({
-    url:
-      "https://api.spotify.com/v1/users/ddcrawford28/playlists/" +
-      emotionMappingObject.angry,
-    headers: {
-      'Authorization': `Bearer ${token}`
-    },
-//    BQD_HUlgdkR2ZteEt4yhQ2JQu973Hqk1-DQXatk4obARx58QFJSUue_nGuIPyLvlre72cWZDRo1xSHv6YUzSmNajU7hXukkf0qtnnq0ff9AAoq_3XKMiql6vQUSbmELirewje9Clavcey2MKng
-    //   (`Fifteen is ${a + b} and
-    //   not ${2 * a + b}.`);
+    $.ajax({
+        url: "https://api.spotify.com/v1/users/ddcrawford28/playlists/" +
+            emotionMappingObject.angry,
+        headers: {
+            'Authorization': `Bearer ${token}`
+        },
+        //    BQD_HUlgdkR2ZteEt4yhQ2JQu973Hqk1-DQXatk4obARx58QFJSUue_nGuIPyLvlre72cWZDRo1xSHv6YUzSmNajU7hXukkf0qtnnq0ff9AAoq_3XKMiql6vQUSbmELirewje9Clavcey2MKng
+        //   (`Fifteen is ${a + b} and
+        //   not ${2 * a + b}.`);
 
-    success: function(response) {
-      console.log("response: ", response);
-    }
-  });
+        success: function (response) {
+            console.log("response: ", response);
+        }
+    });
 });
 
 var start = window.location.href.indexOf("=");
@@ -54,9 +53,12 @@ $("#getEmotion").on("click", function (event) {
     event.preventDefault();
 
     var settings = {
-        "url": "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=http://entertainment.ie//images_content/rectangle/620x372/Shining201210161622705.jpg&return_attributes=emotion",
-        "method": "POST",
+        "url": "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=" + imageUrl + "http://entertainment.ie//images_content/rectangle/620x372/Shining201210161622705.jpg&return_attributes=emotion",
+        "method": "POST",    
     }
+
+    var imageUrl = "http://res.cloudinary.com/moodyappcloudname/image/upload/v1522691962/facePlusPlusTest_ix32jk.jpg";
+    
     $.ajax(settings).done(function (response) {
 
         var emotionArray = response.faces[0].attributes.emotion;
@@ -120,3 +122,15 @@ window.onload = function () {
 
 // when the uses chooses the photo form the local drive it will also upload it's self where the current placeholer photo is (class="placeholder-image")
 
+window.onload = function () {
+
+document.getElementById("upload_widget_opener").addEventListener("click", function () {
+    cloudinary.openUploadWidget({
+            cloud_name: 'moodyappcloudname',
+            upload_preset: 'qibijsfk'
+        },
+        function (error, result) {
+            console.log(error, result)
+        });
+}, false);
+}
