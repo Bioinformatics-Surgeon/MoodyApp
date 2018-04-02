@@ -117,6 +117,31 @@ $(document).ready(function () {
                 if (file.type.match(imageType)) {
                     var reader = new FileReader();
 
+// placeholderImage.addClass( "rotate" );
+var rotate = 0;
+$("#placeholderImage").on('click',function(){
+    if(rotate === 0){
+        $(this).css({"transform": "rotate(90deg)"});
+    } else if (rotate === 1){
+        $(this).css({"transform": "rotate(180deg)"});
+
+    } else if (rotate === 2){
+        $(this).css({"transform": "rotate(270deg)"});
+
+    } else if (rotate === 3){
+        $(this).css({"transform": "rotate(360deg)"});
+    }
+
+    if(rotate === 4) {
+        rotate = 0;
+    }
+    rotate++
+   console.log('rotate: ',rotate);
+
+});
+
+
+
                     reader.onload = function (e) {
                         // fileDisplayArea.innerHTML = "";
                         placeholderImage.src = reader.result;
