@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 // Spotify
 // alert("connected");
 
+=======
+>>>>>>> master
 $(document).ready(function() {
   
   var emotionMappingObject = {
@@ -39,6 +42,15 @@ $(document).ready(function() {
     }
   });
 });
+<<<<<<< HEAD
+=======
+// ** To grab the "Bearer-Token" from the redirected URL after logining into Spotify **
+// Example URL after the redirect:
+//https://bioinformatics-surgeon.github.io/MoodyApp/#access_token=BQBNFC7s_igIqfXCCQ2ALuqUorRjDTIdOe-B3jOj6OI-CO82EUYbXCMpK_Z0ZQqjAbPw4-uqXBplmWAnYNEc1MuKCHQZ6HukzAkMT7bvuhYWOaqM8mY_fYu4CvpcongtUtTki61eymrxBCw&token_type=Bearer&expires_in=3600
+// =============================================================================
+/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */
+
+>>>>>>> master
 
 var start = window.location.href.indexOf("=");
 
@@ -82,7 +94,7 @@ window.onload = function () {
 
     var fileInput = document.getElementById('fileInput');
     var fileDisplayArea = document.getElementById('fileDisplayArea');
-
+    var placeholderImage = document.getElementById('placeholderImage');
 
     fileInput.addEventListener('change', function (e) {
         var file = fileInput.files[0];
@@ -92,12 +104,12 @@ window.onload = function () {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                fileDisplayArea.innerHTML = "";
+                // fileDisplayArea.innerHTML = "";
+                placeholderImage.src = reader.result;
+                // var img = new Image();
+                // img.src = reader.result;
 
-                var img = new Image();
-                img.src = reader.result;
-
-                fileDisplayArea.appendChild(img);
+                // fileDisplayArea.appendChild(img);
 
             }
 
