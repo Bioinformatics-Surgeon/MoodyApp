@@ -1,4 +1,4 @@
-Spotify
+
 // alert("connected");
 
 
@@ -46,8 +46,8 @@ $(document).ready(function() {
 // Example URL after the redirect:
 //https://bioinformatics-surgeon.github.io/MoodyApp/#access_token=BQBNFC7s_igIqfXCCQ2ALuqUorRjDTIdOe-B3jOj6OI-CO82EUYbXCMpK_Z0ZQqjAbPw4-uqXBplmWAnYNEc1MuKCHQZ6HukzAkMT7bvuhYWOaqM8mY_fYu4CvpcongtUtTki61eymrxBCw&token_type=Bearer&expires_in=3600
 // ======================================================================
-=======
-{ /* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */ }
+
+ /* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */ 
 
 
 
@@ -125,17 +125,14 @@ window.onload = function () {
 
 }
 
-{
-    /* <div>
-    Select an image file: 
-    <input type="file" id="fileInput">
-    </div>
-    <div id="fileDisplayArea"></div> */
-}
+document.on('click', '.rotate', function(){
+
+
+});
 
 // ======================================================================
 
 // so when the user clicks upload, the local finder comes up and the user chooses a jpeg or png file that is then uploaded to the page inside a **data** var that has already converted the file input from local image format to binary/base64 format. 
 
 // when the uses chooses the photo form the local drive it will also upload it's self where the current placeholer photo is (class="placeholder-image")
-master
+
