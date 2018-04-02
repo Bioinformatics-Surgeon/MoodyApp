@@ -33,6 +33,7 @@ $(document).ready(function() {
 
     success: function(response) {
       console.log("response: ", response)
+      console.log(response.id);
       $("#playlist").attr('src', "https://open.spotify.com/embed/user/ddcrawford28/playlist/1yrVnLy8kZYvp8r6XuLono");
     }
   });
