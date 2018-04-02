@@ -1,12 +1,10 @@
 #logo-container {
     font-family: 'Pacifico', cursive;
-    margin-top: 12px;
 }
 
 #navBar {
     font-family: 'Varela Round', sans-serif;
     font-size: 40px;
-    margin-top: 25px;
 }
 
 .photoContainer {
@@ -58,12 +56,16 @@ main {
 
 .moodContainer {
     font-family: 'Varela Round', sans-serif;
-    font-size: 35px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
     border: 1px solid grey;
     margin-top: 75px;
     text-align: left;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: -0.2rem 0 1.68rem 0;
 }
 
 .playlistContainer {
@@ -92,17 +94,7 @@ iframe {
     border: 1px solid grey;
     margin-bottom: 25px;
     text-align: left;
-    height: 100px;
-    width: 100%; */
-    font-family: 'Varela Round', sans-serif;
-    font-size: 25px;
-    background-color: white;
-    padding: 20px;
-    border: 2px solid grey;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: left;
-    height: 100px;
+    height: 150px;
     width: 100%;
 }
 
