@@ -31,10 +31,18 @@ $(document).ready(function () {
 
 
             function displayPlaylist(emotion) {
-                emotion = emotionMappingObject.emotion;
+                let emotionIdToFind
+                if(emotion === "sad") {
+                    emotionIdToFind = "0ejyqdntIi7ZukKgCABVFq";
+                } else if(emotion === "angry"){
+                    emotionIdToFind = "1yrVnLy8kZYvp8r6XuLono";
+                } else{
+                    emotionIdToFind = "6AtEuKdXIbx2w5Lhqf0GRP";
+                }
+                // emotion = emotionMappingObject.emotion;
                 //run the ajax call
                 $.ajax({
-                        url: "https://api.spotify.com/v1/users/ddcrawford28/playlists/" + emotion,
+                        url: "https://api.spotify.com/v1/users/ddcrawford28/playlists/" + emotionIdToFind,
                         headers: {
                             'Authorization': `Bearer ${token}`
                         },
