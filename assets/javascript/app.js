@@ -106,28 +106,15 @@ window.onload = function () {
 
 }
 
-
-// placeholderImage.addClass( "rotate" );
-var rotate = 0;
-$("#placeholderImage").on('click',function(){
-    if(rotate === 0){
-        $(this).css({"transform": "rotate(90deg)"});
-    } else if (rotate === 1){
-        $(this).css({"transform": "rotate(180deg)"});
-
-    } else if (rotate === 2){
-        $(this).css({"transform": "rotate(270deg)"});
-
-    } else if (rotate === 3){
-        $(this).css({"transform": "rotate(360deg)"});
+var value = 0
+$("#placeholderImage").rotate({
+  bind:
+  {
+    click: function(){
+      value +=90;
+      $(this).rotate({ animateTo:value})
     }
-
-    if(rotate === 4) {
-        rotate = 0;
-    }
-    rotate++
-   console.log('rotate: ',rotate);
-
+  }
 });
 
 
