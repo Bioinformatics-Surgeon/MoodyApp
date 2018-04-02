@@ -111,62 +111,35 @@ $(document).ready(function () {
             var placeholderImage = document.getElementById('placeholderImage');
 
             fileInput.addEventListener('change', function (e) {
-                var file = fileInput.files[0];
-                var imageType = /image.*/;
+            var file = fileInput.files[0];
+            var imageType = /image.*/;
+                reader.onload = function (e) {
+                    // fileDisplayArea.innerHTML = "";
+                    placeholderImage.src = reader.result;
+                    // var img = new Image();
+                    // img.src = reader.result;
 
-                if (file.type.match(imageType)) {
-                    var reader = new FileReader();
+                    // fileDisplayArea.appendChild(img);
 
-// placeholderImage.addClass( "rotate" );
-var rotate = 0;
-$("#placeholderImage").on('click',function(){
-    if(rotate === 0){
-        $(this).css({"transform": "rotate(90deg)"});
-    } else if (rotate === 1){
-        $(this).css({"transform": "rotate(180deg)"});
-
-    } else if (rotate === 2){
-        $(this).css({"transform": "rotate(270deg)"});
-
-    } else if (rotate === 3){
-        $(this).css({"transform": "rotate(360deg)"});
-    }
-
-    if(rotate === 4) {
-        rotate = 0;
-    }
-    rotate++
-   console.log('rotate: ',rotate);
-
-});
-
-
-
-                    reader.onload = function (e) {
-                        // fileDisplayArea.innerHTML = "";
-                        placeholderImage.src = reader.result;
-                        // var img = new Image();
-                        // img.src = reader.result;
-
-                        // fileDisplayArea.appendChild(img);
-
-                    }
-
-                    reader.readAsDataURL(file);
-                } else {
-                    fileDisplayArea.innerHTML = "File not supported!"
                 }
-            });
+
+                reader.readAsDataURL(file);
+            } else {
+                fileDisplayArea.innerHTML = "File not supported!"
+            }
+        });
 
         }
-
-        {
-            /* <div>
-            Select an image file: 
-            <input type="file" id="fileInput">
-            </div>
-            <div id="fileDisplayArea"></div> */
-        }
+var value = 0
+$("#placeholderImage").rotate({
+  bind:
+  {
+    click: function(){
+      value +=90;
+      $(this).rotate({ animateTo:value})
+    }
+  }
+});
 
         // ======================================================================
 
