@@ -12,11 +12,7 @@
     padding-bottom: 79px;
 }
 
-#getEmotion {
-    font-size: 23px;
-    margin-top: 8px;
-}
-
+#getEmotion,
 #contactUs {
     font-size: 23px;
     margin-top: 8px;
@@ -26,14 +22,6 @@
     font-family: 'Varela Round', sans-serif;
     color: white;
     margin-top: 75px;
-}
-
-.form-input {
-    font-family: 'Varela Round', sans-serif;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px 40px;
-    border: 1px solid grey;
-    margin-bottom: 170px;
 }
 
 .photoContainer {
@@ -57,53 +45,12 @@
 
 }
 
-.sumbitBtn {
-    font-family: 'Varela Round', sans-serif;
-    border-radius: 8px;
-    padding: 8px 20px;
-    color: white;
-}
-
-body {
-    /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
-    background-image: url('../images/sea_texture3.jpg');
-    /* background-repeat: repeat;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column; */
- }
-
-main {
-    flex: 1 0 auto;
-}
-
 .moodContainer {
     font-family: 'Varela Round', sans-serif;
     background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid grey;
     margin-top: 75px;
     text-align: left;
-}
-
-h1 {
-    font-size: 2.2rem;
-    margin: 1.8rem 0 1.68rem 0;
-    margin-left: 25px;    
-}
-
-h2 {
-    font-size: 2rem;
-    margin: 1.8rem 0 1.68rem 0;
-    margin-left: 25px;
-}
-
-h3 {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: center;
-    line-height: 102%;
-    margin: 0.946667rem 9rem 0.168rem 7rem;
 }
 
 .playlistContainer {
@@ -142,6 +89,50 @@ footer {
 
 }
 
+.form-input {
+    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px 40px;
+    border: 1px solid grey;
+    margin-bottom: 170px;
+}
+
+.sumbitBtn {
+    font-family: 'Varela Round', sans-serif;
+    border-radius: 8px;
+    padding: 8px 20px;
+    color: white;
+}
+
+body {
+    background-image: url('../images/sea_texture3.jpg');
+ }
+
+main {
+    flex: 1 0 auto;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 1.8rem 0 1.68rem 0;
+    margin-left: 25px;    
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1.8rem 0 1.68rem 0;
+    margin-left: 25px;
+}
+
+h3 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    line-height: 102%;
+    margin: 0.946667rem 9rem 0.168rem 7rem;
+}
+
 @media screen and (max-width: 980px) {
     .placeholder-image {
         margin-top: 50px;
@@ -150,7 +141,7 @@ footer {
     }
 
     #logo-container {
-        
+        left: 10%;
     }
 
     .moodContainer { 
@@ -170,12 +161,26 @@ footer {
         width: 250px;
     }
 
+    #logo-container {
+        left: 10%;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin: 0.946667rem 0rem 0.168rem 5rem;
+    }
+
+    .btn {
+        margin-left: -77px;
+        bottom: 85px;
+    }
+
     .moodContainer { 
-        margin-top: 35px;
+        margin-top: 45px;
     }
 
     iframe {
-        margin-top: 50px;
+        margin-top: 40px;
         height: 100px;
     }
 }
@@ -187,6 +192,19 @@ footer {
         width: 200px;
     }
 
+    #logo-container {
+        left: 10%;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+        margin: 0.946667rem 0rem 5.168rem 4rem;
+    }
+
+    .photoClick {
+        margin-bottom: 0;
+    }
+
     .moodContainer { 
         margin-top: 25px;
     }
@@ -196,4 +214,41 @@ footer {
         height: 100px;
     }
 
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    #logo-container {
+        left: 20%;
+        font-size: 2.5rem;
+        margin-top: 8px;
+    }
+
+    #getEmotion,
+    #contactUs {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .placeholder-image {
+        margin: 30px;
+        height: 290px;
+        width: 290px;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 256px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .moodContainer {
+        margin-top: 300px;
+    }
 }
