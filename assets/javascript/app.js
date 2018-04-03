@@ -19,8 +19,8 @@ $(document).ready(function () {
     var playlistId = "";
 
     // console.log("token: ",token);
-    var emotion = "disgust";
-    displayPlaylist(emotion);
+    // var emotion = "disgust";
+    // displayPlaylist(emotion);
 
     function displayPlaylist(emotion) {
         //run the ajax call
@@ -49,16 +49,7 @@ $(document).ready(function () {
 
     // ======================================================================
     // This .on("click") function will trigger the AJAX Call 
-    $("#getEmotion").on("click", function (event) {
-        event.preventDefault();
-
-
-
-        
-
-        var imageUrl = ("src", result[0].url );
-
-        console.log ("ulr " + result[0].url );
+    function getEmotion ( imageUrl ) {
         
         var settings = {
             url: "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=" + imageUrl + "&return_attributes=emotion",
@@ -77,16 +68,16 @@ $(document).ready(function () {
             })
             console.log(keysSorted);
 
-            var emotion = keysSorted[6];
+            var emotion = keysSorted[keysSorted.length - 1];
 
-            console.log(keysSorted[6]);
+            displayPlaylist(emotion);
         });
-    });
+    }
     // ======================================================================
     // ** Take input from "upload button" and convert it into a data-form that can be used in the "query string URL"
 
 
-    document.getElementById("upload_widget_opener").addEventListener("click", function () {
+    $(document).on("click", "#upload_widget_opener", function () {
         cloudinary.openUploadWidget({
             cloud_name: 'moodyappcloudname',
             upload_preset: 'qibijsfk'
@@ -94,9 +85,10 @@ $(document).ready(function () {
         function (error, result) {
             console.log(error, result)
             $("#placeholderImage").attr( "src", result[0].url );
-        });
-    }, false);
 
+            getEmotion( result[0].url );
+        });
+    });
 
     var value = 0
     $("#placeholderImage").rotate({
