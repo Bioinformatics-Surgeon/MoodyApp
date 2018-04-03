@@ -15,7 +15,7 @@ $(document).ready(function() {
     var str = window.location.href;
     var token = str.substring(start + 1, end);
     //FOR TESTING ON LOCAL MACHINE 
-    // var token = "BQD1wXIGwZmQalK0jnN8KEnCqK5m0ixknxpjUWfAbcWygMwqVpVBg-MuEoYwKhm_3T7wdaETs92AdTGpiJzmDg2TUsKdoFXLtUt-aL0ENWXSiTvlDwcH9EmzVGK_tHpFWk-nF3vMeboiff7hBQ";
+   
     var playlistId = "";
     
     // console.log("token: ",token);
