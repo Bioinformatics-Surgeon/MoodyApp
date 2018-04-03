@@ -33,10 +33,10 @@
     width: 400px;
 }
 
-.upload-btn-wrapper {
+.btn {
     position: absolute;
-    overflow: hidden;
     display: inline-block;
+    padding: 20px;
     left: 50%;
     margin-left: -84px;
     bottom: 40px;
@@ -45,25 +45,8 @@
 
 }
 
-.upload-btn-wrapper input[type=file] {
-    left: 0;
-    top: 0;
-    opacity: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.upload-btn-wrapper input[type=file]:hover {
-    cursor: pointer;
-}
-
 body {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    /* background-repeat: repeat;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column; */
 }
 
 main {
