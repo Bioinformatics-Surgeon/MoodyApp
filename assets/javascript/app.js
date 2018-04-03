@@ -52,8 +52,14 @@ $(document).ready(function () {
     $("#getEmotion").on("click", function (event) {
         event.preventDefault();
 
-        var imageUrl = "http://res.cloudinary.com/moodyappcloudname/image/upload/v1522691962/facePlusPlusTest_ix32jk.jpg";
 
+
+        
+
+        var imageUrl = ("src", result[0].url );
+
+        console.log ("ulr " + result[0].url );
+        
         var settings = {
             url: "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=" + imageUrl + "&return_attributes=emotion",
             method: "POST"
@@ -103,6 +109,7 @@ $(document).ready(function () {
             }
         }
     });
+    
     
 });
 
