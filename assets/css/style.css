@@ -16,9 +16,21 @@
 .form-input {
     font-family: 'Varela Round', sans-serif;
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
+    padding: 40px;
     border: 1px solid grey;
     margin-bottom: 170px;
+}
+
+#text-input {
+    margin-bottom: 20px;
+}
+
+.submitBtn {
+    font-family: 'Varela Round', sans-serif;
+    border-radius: 8px;
+    padding: 8px 20px;
+    border: 2px solid grey;
+    color: white;
 }
 
 .photoContainer {
@@ -118,7 +130,6 @@ iframe {
     padding-bottom: 15px;
     font-family: 'Varela Round', sans-serif;
     font-size: 15px;
-
 }
 
 @media screen and (max-width: 980px) {
@@ -128,16 +139,16 @@ iframe {
         width: 325px;
     }
 
-    #logo-container {
-        
-    }
-
     .moodContainer { 
         margin-top: 50px;
     }
 
     iframe {
         height: 280px;
+    }
+
+    #logo-containter {
+        left: 10%;
     }
 
 }
@@ -157,6 +168,10 @@ iframe {
         margin-top: 50px;
         height: 100px;
     }
+
+    #logo-containter {
+        left: 10%;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -173,6 +188,10 @@ iframe {
     iframe {
         margin-top: 30px;
         height: 100px;
+    }
+
+    #logo-containter {
+        left: 10%;
     }
 
 }
