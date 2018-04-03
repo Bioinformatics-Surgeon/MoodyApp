@@ -52,12 +52,14 @@ token = str.substr(start + 1, 143);
 $("#getEmotion").on("click", function (event) {
     event.preventDefault();
 
+        var imageUrl = "http://res.cloudinary.com/moodyappcloudname/image/upload/v1522691962/facePlusPlusTest_ix32jk.jpg";
+
     var settings = {
-        "url": "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=" + imageUrl + "http://entertainment.ie//images_content/rectangle/620x372/Shining201210161622705.jpg&return_attributes=emotion",
-        "method": "POST",    
+        url: "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=" + imageUrl +"&return_attributes=emotion",
+        method: "POST"  
     }
 
-    var imageUrl = "http://res.cloudinary.com/moodyappcloudname/image/upload/v1522691962/facePlusPlusTest_ix32jk.jpg";
+
     
     $.ajax(settings).done(function (response) {
 
@@ -121,6 +123,9 @@ window.onload = function () {
 // so when the user clicks upload, the local finder comes up and the user chooses a jpeg or png file that is then uploaded to the page inside a **data** var that has already converted the file input from local image format to binary/base64 format. 
 
 // when the uses chooses the photo form the local drive it will also upload it's self where the current placeholer photo is (class="placeholder-image")
+// ======================================================================
+
+// Cloudinary widget
 
 window.onload = function () {
 
@@ -131,6 +136,19 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
         },
         function (error, result) {
             console.log(error, result)
+            $("#placeholderImage").attr( "src", result[0].url );
         });
 }, false);
+
+
+// $(document).on("change", (function () {
+//     var form = new FormData();
+//     console.log(form);
+
+// var tag = $.cloudinary.url(form);}
+
+
+
 }
+
+// ======================================================================
