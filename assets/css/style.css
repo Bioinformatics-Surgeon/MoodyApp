@@ -50,9 +50,9 @@
 
 .btn {
     position: absolute;
-    left: 50%;
+    left: 49%;
     margin-left: -84px;
-    bottom: 55px;
+    bottom: 125px;
     border-radius: 8px;
 
 }
@@ -95,7 +95,15 @@ h2 {
     font-size: 2rem;
     margin: 1.8rem 0 1.68rem 0;
     margin-left: 25px;
+}
 
+h3 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    line-height: 102%;
+    margin: 0.946667rem 9rem 0.168rem 7rem;
 }
 
 .playlistContainer {
