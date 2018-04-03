@@ -41,8 +41,8 @@
     margin-top: 75px;
     border-radius: 50%;
     border: 1px solid black;
-    height: 400px;
-    width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 .upload-btn-wrapper {
@@ -135,8 +135,6 @@ iframe {
 @media screen and (max-width: 980px) {
     .placeholder-image {
         margin-top: 50px;
-        height: 350px;
-        width: 325px;
     }
 
     .moodContainer { 
@@ -156,8 +154,6 @@ iframe {
 @media screen and (max-width: 768px) {
     .placeholder-image {
         margin-top: 35px;
-        height: 250px;
-        width: 250px;
     }
 
     .moodContainer { 
@@ -165,7 +161,7 @@ iframe {
     }
 
     iframe {
-        margin-top: 50px;
+        margin-top: 35px;
         height: 100px;
     }
 
@@ -177,8 +173,6 @@ iframe {
 @media screen and (max-width: 640px) {
     .placeholder-image {
         margin-top: 25px;
-        height: 200px;
-        width: 200px;
     }
 
     .moodContainer { 
