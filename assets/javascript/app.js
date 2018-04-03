@@ -1,41 +1,47 @@
 $(document).ready(function() {
   
-  var emotionMappingObject = {
-    sad: "0ejyqdntIi7ZukKgCABVFq",
-    angry: "1yrVnLy8kZYvp8r6XuLono",
-    happy: "6AtEuKdXIbx2w5Lhqf0GRP",
-    disgust: "7LzO31VmX8H8oHPCZk7AKw",
-    neutral: "4KjjGytXjIH2KZ41HKjz4R",
-    fear: "1Alb1XSrOASaO2Wdrr7lL8",
-    suprise: "3gbUs7iNyYP6E3cr9xQZsD"
-  };
+//   var emotionMappingObject = {
+//     sad: "0ejyqdntIi7ZukKgCABVFq",
+//     angry: "1yrVnLy8kZYvp8r6XuLono",
+//     happy: "6AtEuKdXIbx2w5Lhqf0GRP",
+//     disgust: "7LzO31VmX8H8oHPCZk7AKw",
+//     neutral: "4KjjGytXjIH2KZ41HKjz4R",
+//     fear: "1Alb1XSrOASaO2Wdrr7lL8",
+//     suprise: "3gbUs7iNyYP6E3cr9xQZsD"
+//   };
 
     var start = window.location.href.indexOf("=");
     var end = window.location.href.indexOf("&");
     var str = window.location.href;
     var token = str.substring(start + 1, end);
-    // var token = "BQBJqYhw1Zr8XV7x-_AHE_GWx0267QKZOxQQ7UnH1Y6bnLAI5I-z0YsxSxowIo2vGBzd4DXih2_ZwI1-UnalXTzKmwC_j9X9YNyRfLLL_SBw3ydXYUOdC6CEFyjP-koiUqc-qMa39pT1S1E-_w"
+    //FOR TESTING ON LOCAL MACHINE 
+    var token = "BQAiLUXQdpNhNtPakEcAb3fOcEpU-7c0y2yE0-97ykTxwkFPPgpDT72EAm2pRC56yqeMOdHKT6JSHSUCeMxpY_s4EI9vUUduBsNz3Lr1UCAegUg-DzFDEgtx5wjj3ALE58s_4ONi-IrxxwJVGQ";
+    var playlistId = "";
     
     // console.log("token: ",token);
-
-
-
-  $.ajax({
-    url:
-      "https://api.spotify.com/v1/users/ddcrawford28/playlists/" +
-      emotionMappingObject.angry,
-    headers: {
-      'Authorization': `Bearer ${token}`
-    },
-//    BQD_HUlgdkR2ZteEt4yhQ2JQu973Hqk1-DQXatk4obARx58QFJSUue_nGuIPyLvlre72cWZDRo1xSHv6YUzSmNajU7hXukkf0qtnnq0ff9AAoq_3XKMiql6vQUSbmELirewje9Clavcey2MKng
-    //   (`Fifteen is ${a + b} and
-    //   not ${2 * a + b}.`);
-
-    success: function(response) {
-      console.log("response: ", response);
-    }
-  });
-});
+    var emotion = "disgust";
+    displayPlaylist(emotion);
+    function displayPlaylist(emotion) {
+        //run the ajax call
+        $.ajax({
+                url: "https://api.spotify.com/v1/search?q=" + emotion + "&type=playlist&limit=1",
+                headers: {
+                    'Authorization': "Bearer " + token
+                },
+                success: function (response) {
+                    console.log("response: ", response)
+                    console.log(response.playlists.items[0].uri);
+                    playlistId = response.playlists.items[0].uri;
+                    playlistId = encodeURIComponent(playlistId);
+                    var playlistUrl = "https://open.spotify.com/embed?uri="+playlistId+"&theme=white";
+                    console.log("play list URL: " + playlistUrl);
+                    $("#playlist").attr('src', playlistUrl);
+                }
+                //pass the emotion to the API
+                //add the playlist to the iframe
+            })
+        }
+    });
 
 var start = window.location.href.indexOf("=");
 
@@ -53,9 +59,13 @@ token = str.substr(start + 1, 143);
 $("#getEmotion").on("click", function (event) {
     event.preventDefault();
 
+    var placeholderImage = document.getElementById('placeholderImage').src;
+    placeholderImage = placeholderImage.slice(23);// removes the 'data:image/jpeg;base64,' from the source string
+    //console.log(placeholderImage);
+    //https://cors-anywhere.herokuapp.com/
     var settings = {
-        "url": "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_url=http://entertainment.ie//images_content/rectangle/620x372/Shining201210161622705.jpg&return_attributes=emotion",
-        "method": "POST",
+        "url": "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IxaSYmkV56pcddBXwcShQhnJenSDqE0B&api_secret=CKz2ziVEr8tiDMX8dIWpD5hjeyme102o&image_base64="+placeholderImage+"&return_attributes=emotion",
+        "method": "POST"
     }
     $.ajax(settings).done(function (response) {
 
