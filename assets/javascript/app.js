@@ -87,7 +87,7 @@ $(document).ready(function () {
         },
         function (error, result) {
             console.log(error, result)
-            $("#placeholderImagea").attr( "src", result[0].url );
+            $("#placeholderImage").attr( "src", result[0].url );
         });
     }, false);
 
