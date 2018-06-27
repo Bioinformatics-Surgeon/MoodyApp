@@ -1,5 +1,3 @@
-document.body.style.zoom="90%"
-
 $(document).ready(function () {
 
     //   var emotionMappingObject = {
